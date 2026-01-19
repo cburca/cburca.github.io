@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2-Axis Machine/title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+<a href="../index.html">← Back to Home</a>
+
+<h1>2-Axis Machine, Realtime Control</h1>
+
+<img class="hero" src="../Assets/projects/two-axis-machine/two-axis-machine.png" alt="2 Axis Machine Platform">
+
+<h2>Overview</h2>
+<p>
+Implemented and controled a 2-axis electromechanical mnotion system as part of a laboratory-based controls and mechatronics course.
+The project focused on low-level embedded control (C), hardware-software integration, and real-time system behaviour.
+</p>
+
+<h2>System Architecture</h2>
+<img src="../Assets/projects/two-axis-machine/system-arch.jpg" alt="2-axis architecture diagram">
+<ul>
+    <li>Nucleo F401RE MCU - STM32</li>
+    <li>Nucleo IHM02A1 servo motor driver shield</li>
+    <li>UART protocol for deterministic communication</li>
+</ul>
+
+<p>
+The system consists of two independently driven axes controlled by an STM32 MCU. Each axis is actuated by a servo motor and monitored
+using analog sensor feedback. Motion commands and system state are communicated over a UART serial interface, enabling structured
+command-based control and debugging.
+</p>
+
+<h2>Technical Contributions</h2>
+<ul>
+    <li>Developed embedded firmware on STM32 for real-time motor control</li>
+    <li>Implemented UART serial communication for command incput and system monitoring</li>
+    <li>Integrated analog interfacing for sennsor feedback and signal conditioning</li>
+    <li>Tuned control nbehaviour to achieve smooth, repeatable 2-axis motion</li>
+    <li>Debugged timing, noise, and scaling issues common in mixed analog/digital systems</li>
+</ul>
+
+<h2>Tight polling vs. HW Interrupt Latency Analysis</h2>
+<p>
+Using lab scopes, tight polling and interrup algorithms were analyzed in their speed & latency - along with max MCU clock speed
+each approach would not fail under (found to be ~1.3MHz).
+</p>
+
+<h3>Findings</h3>
+<ul>
+    <li>Tight Polling -> Variance: 336ns w/persistence of 100ms</li>
+    <img src="..Assets/projects/two-axis-machine/tight-polling-latency.png">
+    <li>Interrupts -> Variance: 220ns - 450ns w/persistence of 100ms </li>
+    <img src="..Assets/projects/two-axis-machine/interrupt-latency.png">
+</ul>
+
+<img src="../Assets/projects/two-axis-machine/stm32.png">
+
+<img src="../Assets/projects/two-axis-machine/motor-driver-shield.png">
+
+</div>
+
+</body>
+</html>

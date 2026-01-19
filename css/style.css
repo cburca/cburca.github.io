@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 900px;
     margin: auto;
     padding: 40px 20px;
 }
@@ -13,8 +13,8 @@ body {
 /* Header */
 .header {
     display: flex;
-    justify-content: space-between;
-    gap: 40px;
+    align-items: flex-start;
+    gap: 28px;
     margin-bottom: 60px;
 }
 
@@ -84,6 +84,19 @@ h2 {
     color: #555;
 }
 
+/* Uniform cards */
+.card {
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Ensure titles stay consistent */
+.card h3 {
+    min-height: 44px;
+}
+
 /* Clickable cards */
 .card-link {
     text-decoration: none;
@@ -103,4 +116,13 @@ img {
     max-width: 100%;
     border-radius: 10px;
     margin: 15px 0;
+}
+
+.card-link:hover .card {
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+}
+
+.card {
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
 }

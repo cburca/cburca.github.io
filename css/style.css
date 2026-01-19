@@ -40,8 +40,8 @@ body {
 }
 
 .header-photo img {
-    width: 160px;
-    height: 160px;
+    width: 180px;
+    height: 200px;
     border-radius: 12px;
     object-fit: cover;
 }

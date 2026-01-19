@@ -13,28 +13,38 @@
 
 <h1>OQC AI Vision System</h1>
 
-<img class="hero" src="../assets/experiences/oqc-vision/system.png">
+<!--<img class="hero" src="../Assets/experiences/oqc-vision/system.png">-->
 
 <h2>Problem</h2>
 <p>
 Manual outgoing quality checks created a production bottleneck
-and inconsistent inspection results.
+and inconsistent inspection results. Needed a way to increase throughput while minimizing costs.
 </p>
 
 <h2>Solution</h2>
 <ul>
-    <li>NVIDIA Xavier NX running TensorRT-optimized YOLOv8s</li>
-    <li>Custom dataset annotated in Label Studio</li>
+    <li>Custom dataset gathered & annotated in Label Studio - chose heaviest hitting assembly in quality fails.</li>
     <li>Training performed on Google Colab</li>
+    <li>NVIDIA Xavier NX running TensorRT-optimized YOLOv8s</li>
 </ul>
 
 <h2>Impact</h2>
+<ul>
+    <li>Reduced manual inspection effort, saving over <strong>$40,000 annually</strong> in labor costs on a single product line, while improving consistency.</li>
+    <li>Immediate operator feedback</li>
+    <li>Reduced reworks & inspection time by 20x</li>
+    <li>Establish one-peice flow in manufacturing</li>
+    <li>CM quality standardization</li>
+</ul>
+
+
+<h2>Model Training Results</h2>
 <p>
-Reduced manual inspection effort, saving over
-<strong>$50,000 annually</strong> in labor costs while improving consistency.
+Attached below is the training results for the Screw detection model trained within google colab & PyTorch.
+The TensorRT-optimized engine featured ~75FPS throughput capability at only 13.9ms latency!
 </p>
 
-<img src="../assets/experiences/oqc-vision/results.png">
+<img src="../Assets/experiences/oqc-vision/results.png">
 
 </div>
 

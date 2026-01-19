@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project MARgE – Autonomous Cleaning Robot</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <a href="../index.html">← Back to Home</a>
+
+    <h1>Project MARgE</h1>
+    <h3>Autonomous Desk Cleaning Robot</h3>
+
+    <img class="hero" 
+         src="../Assets/projects/project-marge/marge-hero.jpg" 
+         alt="Project MARgE autonomous cleaning robot">
+
+    <!-- ================= Overview ================= -->
+    <h2>Project Overview</h2>
+    <p>
+        Project MARgE was developed as part of the First-Year Mechatronics Engineering
+        Cornerstone Project. The robot was designed to autonomously clean desk and ground
+        surfaces using integrated mopping and air-blowing mechanisms.
+    </p>
+
+    <p>
+        Despite being constrained to unreliable, low-cost sensors provided for the project,
+        MARgE demonstrated robust autonomous behavior and repeatability, achieving less than
+        10% operational error. The project was one of the few to receive a perfect score during
+        demo day evaluations.
+    </p>
+
+    <!-- ================= System Architecture ================= -->
+    <h2>System Architecture</h2>
+    <ul>
+        <li>LEGO EV3 intelligent brick as the primary controller</li>
+        <li>LEGO EV3 motors and sensors</li>
+        <li>Color sensors for desk-edge detection and guidance</li>
+        <li>Mopping and air-blowing cleaning mechanisms</li>
+        <li>Tetrix aluminum extrusions and couplings for mechanical structure</li>
+        <li>Embedded control implemented using RobotC</li>
+    </ul>
+
+    <!-- ================= Autonomy Pipeline ================= -->
+    <h2>Autonomous Operation Pipeline</h2>
+
+    <h3>1. Mapping Mode</h3>
+    <p>
+        After being placed in one of the four corners of a desk, MARgE enters a mapping
+        sequence where it follows the desk perimeter using color sensor-based edge detection.
+        Encoder values are recorded to estimate desk dimensions.
+    </p>
+    <p>
+        A robust guidance strategy ensured MARgE maintained alignment with the desk edges
+        throughout the mapping process.
+    </p>
+
+    <h3>2. Offsetting & Coverage Planning</h3>
+    <p>
+        Using the mapped dimensions, MARgE calculates an optimal cleaning trajectory by
+        subdividing the desk into a series of equally spaced rectangular passes. During
+        this stage, the mopping mechanism is deployed and activated.
+    </p>
+
+    <img src="../assets/projects/project-marge/coverage-path.png"
+         alt="Coverage planning for Project MARgE">
+
+    <h3>3. Localization & Homing</h3>
+    <p>
+        After completing the primary cleaning passes, MARgE enters a remainder stage to
+        address any unvisited regions. The robot then determines its location relative
+        to the start of the mission and autonomously returns to its deployment position.
+    </p>
+
+    <!-- ================= Contributions ================= -->
+    <h2>Key Technical Contributions</h2>
+    <ul>
+        <li>Designed a robust autonomous cleaning algorithm using limited sensor inputs</li>
+        <li>Implemented encoder-based distance tracking for mapping and localization</li>
+        <li>Developed a state-machine-based control architecture in RobotC</li>
+        <li>Integrated LEGO EV3 and Tetrix mechanical subsystems</li>
+        <li>Achieved reliable autonomy despite sensor noise and uncertainty</li>
+    </ul>
+
+    <!-- ================= Results ================= -->
+    <h2>Results & Performance</h2>
+    <ul>
+        <li>Less than 10% operational error across multiple test runs</li>
+        <li>Consistent full desk coverage</li>
+        <li>Perfect score achieved on demo day</li>
+        <li>Stable operation across varying surface and lighting conditions</li>
+    </ul>
+
+    <!-- ================= Skills ================= -->
+    <h2>Skills Demonstrated</h2>
+    <ul>
+        <li>Autonomous robotics system design</li>
+        <li>Embedded programming (RobotC)</li>
+        <li>Sensor-based navigation and fault tolerance</li>
+        <li>Motion planning and coverage algorithms</li>
+        <li>Mechatronic system integration</li>
+        <li>Team-based engineering design</li>
+    </ul>
+
+    <!-- ================= Reflection ================= -->
+    <h2>Reflection</h2>
+    <p>
+        Project MARgE provided early exposure to real-world robotics challenges such as
+        unreliable sensing, imperfect actuation, and the importance of robust autonomous
+        control logic. The lessons learned in this project directly informed later work on
+        more advanced robotic systems and autonomous platforms.
+    </p>
+
+</div>
+
+</body>
+</html>

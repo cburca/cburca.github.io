@@ -41,15 +41,19 @@ on embedded hardware.
 
 <h2>Results</h2>
 <img src="../Assets/projects/helix-mk1/build_prog2.jpeg">
-<p>
-Achieved stable closed-loop velocity control and real-time odometry
-streaming to ROS2.
-</p>
+<ul>
+    <li>Achieved stable closed-loop velocity control and real-time odometry
+        streaming to ROS2 via custom UART script.</li>
+    <li>Wireless ROS2 teleop control from dev machine to Pi (via /cmd_vel topic)</li>
+    <li>Power protection for mixed-voltage system</li>
+</ul>
 
 <h2>Next Improvements</h2>
-<p>
-Integrate IMU sensor fusion via EKF and deploy full Nav2 autonomous navigation.
-</p>
+<ul>
+    <li>Orbbec Astra 3D Camera setup -> point clouds</li>
+    <li>Integrate WT901 IMU</li>
+    <li>Pose Estimate sensor fusion via EKF -> Nav2 stack</li>
+</ul>
 
 </div>
 
